@@ -11,6 +11,10 @@
 <body>
     <header>
         @include('layouts.navbar')
+        @if ('href'!=('/'))
+            @include('layouts.navbardeux')
+        @else
+        @endif
     </header>
 
     <main>

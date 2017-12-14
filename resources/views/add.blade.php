@@ -2,9 +2,19 @@
 @section('title')
 Ajouter un livre
 @endsection
+
+@section('onglet1', 'Accueil')
+@section('href1', '/')
+@section('onglet2', 'Supprimer')
+@section('href2', '/delete')
+@section('onglet3', 'Liste')
+@section('href3', '/listing')
+@section('onglet4', 'Mettre à jour')
+@section('href4', '/updatelist')
+
 @section('main')
 <div class="form-add">
-    {!! Form::open(['url' => '/game/insert']) !!}
+    {!! Form::open(['url' => '/game/insert', 'class' => 'container']) !!}
     <div class="group">
         {{{ Form::label('Nom :') }}}
         {{{ Form::text('name') }}}

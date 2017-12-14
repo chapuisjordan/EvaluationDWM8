@@ -2,6 +2,14 @@
 @section('title')
     Mettre à jour un Jeu
 @endsection
+@section('onglet1', 'Accueil')
+@section('href1', '/')
+@section('onglet2', 'Ajouter')
+@section('href2', '/add')
+@section('onglet3', 'Liste')
+@section('href3', '/listing')
+@section('onglet4', 'Supprimer')
+@section('href4', '/delete')
 @section('main')
 <table class="tableau">
     <tr class="en-tete-tableau">

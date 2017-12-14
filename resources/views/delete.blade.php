@@ -2,6 +2,14 @@
 @section('title')
     Suppression d'un film
 @endsection
+@section('onglet1', 'Accueil')
+@section('href1', '/')
+@section('onglet2', 'Ajouter')
+@section('href2', '/add')
+@section('onglet3', 'Liste')
+@section('href3', '/listing')
+@section('onglet4', 'Mettre à jour')
+@section('href4', '/updatelist')
 
 @section('main')
     <table class="tableau">

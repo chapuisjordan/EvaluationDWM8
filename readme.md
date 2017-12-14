@@ -5,6 +5,8 @@
 3 - Création de la page create.
 4 - Création de la page delete.
 5 - Création de la page update.
+6 - Création d'un deuxième navbar afin de faciliter la visite.
+
 
 
 <h2>Prolèmes rencontrés :<br><br></h2>
@@ -17,5 +19,6 @@ dd($authorsAll)->renvoie un array avec les données.
 <strong>3-htmlentities() expects parameter 1 to be string, array given :</strong>
 <br>Problème reglé : 'label' au lieu de select...<br>
 <br><strong>4-Method detach does not exist.</strong>
+
  
 

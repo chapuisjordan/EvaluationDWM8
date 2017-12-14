@@ -2,7 +2,14 @@
 @section('title')
 Liste des films
 @endsection
-
+@section('onglet1', 'Accueil')
+@section('href1', '/')
+@section('onglet2', 'Ajouter')
+@section('href2', '/add')
+@section('onglet3', 'Supprimer')
+@section('href3', '/delete')
+@section('onglet4', 'Mettre à jour')
+@section('href4', '/updatelist')
 @section('main')
     <table class="tableau">
         <tr class="en-tete-tableau">

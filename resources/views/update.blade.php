@@ -11,22 +11,27 @@
             {{{ Form::label('Nom :') }}}
             {{{ Form::text('name', $game->name) }}}
         </div>
+        <hr class="barre">
         <div class="group">
             {{{ Form::label('Date de création :') }}}
             {{{ Form::text('created_date', $game->created_date) }}}
         </div>
+        <hr class="barre">
         <div class="group">
             {{{ Form::label('Dernière maj :') }}}
             {{{ Form::text('updated_date',$game->updated_date) }}}
         </div>
+        <hr class="barre">
         <div class="group-select">
             {{{ Form::label('Support(s) : ') }}}
             {{{ Form::select('supports[]', $supports, $game->supports, ['multiple' => true]) }}}
         </div>
+        <hr class="barre">
         <div class="group-select">
             {{{ Form::label('Language(s) : ') }}}
             {{{ Form::select('languages[]', $languages, $game->languages, ['multiple' => true]) }}}
         </div>
+        <hr class="barre">
         <div class="submit">
             {{{ Form::submit('Insérer') }}}
         </div>
