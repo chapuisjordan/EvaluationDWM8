@@ -17,3 +17,4 @@ Route::get('/add', 'gamesController@add');
 Route::post('/game/insert', 'gamesController@addAction');
 Route::get('/delete', 'gamesController@delete');
 Route::get('/game/delete/{id}', 'gamesController@deleteAction');
+Route::get('/updatelist', 'gamesController@updatelist');

@@ -94,11 +94,9 @@ class gamesController extends Controller
     public function deleteAction(Request $request, $id)
     {
         $game = Game::find($id);
-        $game->supports->detach();
-        $game->languages->detach();
         $game->delete();
         return redirect('/delete');
     }
-
+    public function updateList
 
 }
