@@ -54,6 +54,7 @@ body{
     margin: 30px auto 0 auto;
     width: 40%;
     border-collapse: collapse;
+    border: 2px solid #16425B;
 }
 .tableau td{
     border: 1px solid white;
@@ -63,4 +64,36 @@ body{
 }
 .en-tete-tableau td{
     background-color: #D9DCD6;
+}
+.form-add{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 17px;
+    text-decoration: underline;
+    color: #D9DCD6;
+    width: 300px;
+    height: 25px;
+}
+.group-select{
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 17px;
+    text-decoration: underline;
+    color: #D9DCD6;
+    width: 300px;
+}
+.submit
+{
+    margin: 20px auto;
+    width: 20%;
 }

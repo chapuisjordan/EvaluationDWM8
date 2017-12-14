@@ -37,7 +37,68 @@ class gamesController extends Controller
         }
         return view('listing', ['games' => $games, 'supports' => $supports, 'languages' => $languages, 'authors' => $authors]);
     }
+    public function add()
+    {
+        $supportsAll = Support::all();
+        $supports =[];
+        foreach ($supportsAll as $value)
+        {
+            $supports[$value->id] = $value->support;
+        }
+        $languagesAll = Language::all();
+        $languages =[];
+        foreach ($languagesAll as $value)
+        {
+            $languages[$value->id] = $value->language;
+        }
+        return view('add', ['supports' => $supports, 'languages' => $languages]);
+    }
+    public function addAction(Request $request)
+    {
+        $game = new Game;
+        $game->name = $request->name;
+        $game->updated_date = $request->updated_date;
+        $game->created_date = $request->created_date;
+        $game->save();
+        $game->supports()->attach($request->supports);
+        $game->languages()->attach($request->languages);
+        return redirect ('/');
+    }
+    public function delete()
+    {
+        $games = Game::all();
+        $supportsAll = Support::all();
+        $supports =[];
+        foreach ($supportsAll as $value)
+        {
+            $supports[$value->id] = $value->support;
+        }
+        $languagesAll = Language::all();
+        $languages =[];
+        foreach ($languagesAll as $value)
+        {
+            $languages[$value->id] = $value->language;
+        }
+        $authorsAll = Author::all();
+        $authors =[];
+        foreach ($authorsAll as $value)
+        {
+            $authors[$value->id] = $value->author;
+        }
+        return view('delete', ['games' => $games, 'supports' => $supports, 'languages' => $languages, 'authors' => $authors]);
+    }
 
+    /**
+     *
+     */
+    public function deleteAction(Request $request, $id)
+    {
+        $game = Game::find($id);
+        $game->supports->detach();
+        $game->languages->detach();
+        $game->delete();
+        return redirect('/delete');
+    }
 
 
 }
