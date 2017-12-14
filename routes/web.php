@@ -13,3 +13,10 @@
 
 Route::get('/', 'gamesController@accueil');
 Route::get('/listing', 'gamesController@listing');
+Route::get('/add', 'gamesController@add');
+Route::post('/game/insert', 'gamesController@addAction');
+Route::get('/delete', 'gamesController@delete');
+Route::get('/game/delete/{id}', 'gamesController@deleteAction');
+Route::get('/updatelist', 'gamesController@updatelist');
+Route::get('/game/update/{id}', 'gamesController@update');
+Route::post('/game/updateAction/{id}', 'gamesController@updateAction');

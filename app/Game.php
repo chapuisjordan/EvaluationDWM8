@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
+    public $timestamps = false;
     public function languages()
     {
         return $this->belongsToMany('App\Language');
@@ -14,4 +15,9 @@ class Game extends Model
     {
         return $this->belongsToMany('App\Support');
     }
+    public function  authors()
+    {
+        return $this->belongsTo('App\Author');
+    }
+
 }
