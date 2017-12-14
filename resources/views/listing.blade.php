@@ -5,9 +5,8 @@ Liste des films
 
 @section('main')
     <table class="tableau">
-        <tr>
+        <tr class="en-tete-tableau">
             <td>Nom</td>
-            <td>Auteur</td>
             <td>Dernière MAJ</td>
             <td>Supports</td>
             <td>Languages</td>
@@ -15,7 +14,6 @@ Liste des films
         @foreach($games as $game)
            <tr>
                <td>{{ $game->name }}</td>
-               <td> </td>
                @if($game->updated_date == null)
                    <td>Null</td>
                @else
@@ -32,6 +30,7 @@ Liste des films
                @endforeach
                </td>
            </tr>
+
         @endforeach
     </table>
 

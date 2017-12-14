@@ -21,22 +21,20 @@ class gamesController extends Controller
         $supports =[];
         foreach ($supportsAll as $value)
         {
-            $supports[$value->id] = $value->supports;
+            $supports[$value->id] = $value->support;
         }
         $languagesAll = Language::all();
         $languages =[];
         foreach ($languagesAll as $value)
         {
-            $languages[$value->id] = $value->languages;
+            $languages[$value->id] = $value->language;
         }
         $authorsAll = Author::all();
         $authors =[];
         foreach ($authorsAll as $value)
         {
-            $authors[$value->id] = $value->authors;
+            $authors[$value->id] = $value->author;
         }
-        dd($authorsAll);
-
         return view('listing', ['games' => $games, 'supports' => $supports, 'languages' => $languages, 'authors' => $authors]);
     }
 

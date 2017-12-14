@@ -14,4 +14,9 @@ class Game extends Model
     {
         return $this->belongsToMany('App\Support');
     }
+    public function  authors()
+    {
+        return $this->belongsTo('App\Author');
+    }
+
 }

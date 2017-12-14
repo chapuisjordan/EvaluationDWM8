@@ -5,6 +5,7 @@
 }
 body{
     margin: 0;
+    background-image: url('../image/black_linen_v2.png');
 }
 .title-navbar{
     margin:0 auto;
@@ -49,6 +50,17 @@ body{
     text-decoration: underline;
 }
 .tableau{
+    font-family: 'Nunito', sans-serif;
     margin: 30px auto 0 auto;
     width: 40%;
+    border-collapse: collapse;
+}
+.tableau td{
+    border: 1px solid white;
+    padding: 10px 5px;
+    text-align: center;
+    background-color: #3A7CA5;
+}
+.en-tete-tableau td{
+    background-color: #D9DCD6;
 }
