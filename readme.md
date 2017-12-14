@@ -2,6 +2,9 @@
                 
 1 - Style de 'accueil'.<br>
 2 - Création de la page listing.
+3 - Création de la page create.
+4 - Création de la page delete.
+5 - Création de la page update.
 
 
 <h2>Prolèmes rencontrés :<br><br></h2>

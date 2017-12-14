@@ -2,6 +2,7 @@
 @section('title')
     Mettre à jour un Jeu
 @endsection
+@section('main')
 <table class="tableau">
     <tr class="en-tete-tableau">
         <td>Nom</td>
@@ -28,8 +29,15 @@
                     {{ $language->language }}
                 @endforeach
             </td>
-            <td><i class="fa fa-refresh" aria-hidden="true"></i></td>
+            <td>
+            <form method="get" action="/game/update/{{ $game->id }}">
+                <button class="btn">
+                    <i class="fa fa-refresh orange" aria-hidden="true"></i>
+                </button>
+            </form>
+            </td>
         </tr>
 
     @endforeach
 </table>
+@endsection

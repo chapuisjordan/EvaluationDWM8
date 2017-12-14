@@ -97,6 +97,60 @@ class gamesController extends Controller
         $game->delete();
         return redirect('/delete');
     }
-    public function updateList
+    public function updateList()
+    {
+        $games = Game::all();
+        $supportsAll = Support::all();
+        $supports =[];
+        foreach ($supportsAll as $value)
+        {
+            $supports[$value->id] = $value->support;
+        }
+        $languagesAll = Language::all();
+        $languages =[];
+        foreach ($languagesAll as $value)
+        {
+            $languages[$value->id] = $value->language;
+        }
+        $authorsAll = Author::all();
+        $authors =[];
+        foreach ($authorsAll as $value)
+        {
+            $authors[$value->id] = $value->author;
+        }
+        return view('updatelist', ['games' => $games, 'supports' => $supports, 'languages' => $languages, 'authors' => $authors]);
+    }
+    public function update(Request $request, $id)
+    {
+        $supportsAll = Support::all();
+        $supports =[];
+        foreach ($supportsAll as $value)
+        {
+            $supports[$value->id] = $value->support;
+        }
+        $languagesAll = Language::all();
+        $languages =[];
+        foreach ($languagesAll as $value)
+        {
+            $languages[$value->id] = $value->language;
+        }
+        $authorsAll = Author::all();
+        $authors =[];
+        foreach ($authorsAll as $value)
+        {
+            $authors[$value->id] = $value->author;
+        }
+        $game = Game::find($id);
+        return view('update', ['game' => $game, 'supports' => $supports, 'languages' => $languages, 'authors' => $authors]);
+    }
+    public function updateAction(Request $request,$id)
+    {
+        $game = Game::find($request->id);
+        $game->name = $request->name;
+        $game->created_date = $request->created_date;
+        $game->updated_date = $request->updated_date;
+        $game->save();
+        return redirect('/');
+    }
 
 }

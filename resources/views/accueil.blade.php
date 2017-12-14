@@ -17,7 +17,7 @@ Accueil
     </a>
 </div>
 <div class="categories">
-    <a href="">
+    <a href="/updatelist">
     <div class="categorie update">
         <h2 class="categorie-texte">Mettre à jour un jeux</h2>
     </div>
