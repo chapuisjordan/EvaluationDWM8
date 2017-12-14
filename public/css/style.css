@@ -1,0 +1,54 @@
+.navbar{
+    width: 100%;
+    background-color:#16425B;
+    height: 70px;
+}
+body{
+    margin: 0;
+}
+.title-navbar{
+    margin:0 auto;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    padding-top:10px;
+}
+.categories{
+    width: 85%;
+    min-height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.categorie{
+    margin-top:20px;
+    width: 500px;
+    height: 300px;
+    background-size: 500px 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listing{
+    background-image: url('../image/listing.jpg');
+}
+.add{
+    background-image: url('../image/create.jpg');
+}
+.update{
+    background-image: url('../image/update.jpg');
+}
+.delete{
+    background-image: url('../image/listing.jpg');
+}
+.categorie-texte{
+    font-size: 40px;
+    color: black;
+    text-decoration: underline;
+}
+.tableau{
+    margin: 30px auto 0 auto;
+    width: 40%;
+}
