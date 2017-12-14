@@ -6,6 +6,7 @@
 @section('main')
     <div class="form-add">
         {!! Form::open(['url' => '/game/updateAction/{id}']) !!}
+        {{{ Form::hidden('id', $game->id) }}}
         <div class="group">
             {{{ Form::label('Nom :') }}}
             {{{ Form::text('name', $game->name) }}}

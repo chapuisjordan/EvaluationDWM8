@@ -150,7 +150,11 @@ class gamesController extends Controller
         $game->created_date = $request->created_date;
         $game->updated_date = $request->updated_date;
         $game->save();
-        return redirect('/');
+        $game->supports()->detach();
+        $game->supports()->attach($request->supports);
+        $game->languages()->detach();
+        $game->languages()->attach($request->languages);
+        return redirect('/updatelist');
     }
 
 }
