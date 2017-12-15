@@ -161,6 +161,7 @@ class gamesController extends Controller
         $game->created_date = $request->created_date;
         $game->updated_date = $request->updated_date;
         $game->number = $request->number;
+        $game->author_id = $request->author;
         $game->save();
         $game->supports()->detach();
         $game->supports()->attach($request->supports);
