@@ -1,15 +1,18 @@
 @extends('layouts.index')
 @section('title')
-Liste des films
+ <i class="fa fa-list" aria-hidden="true"></i> Liste des jeux
 @endsection
-@section('onglet1', 'Accueil')
-@section('href1', '/')
-@section('onglet2', 'Ajouter')
-@section('href2', '/add')
-@section('onglet3', 'Supprimer')
-@section('href3', '/delete')
-@section('onglet4', 'Mettre à jour')
-@section('href4', '/updatelist')
+@section('navbardeux')
+    <div class="navbardeux">
+        <div class="onglets">
+            <a href="/" class="no-style"><div class="onglet hover-orange">Accueil</div></a>
+            <a href="/delete" class="no-style"><div class="onglet hover-orange">Supprimer</div></a>
+            <a href="/add" class="no-style"><div class="onglet hover-orange">Ajouter</div></a>
+            <a href="/updatelist" class="no-style"><div class="onglet hover-orange">Mettre à jour</div></a>
+        </div>
+    </div>
+@endsection
+
 @section('main')
     <table class="tableau">
         <tr class="en-tete-tableau">

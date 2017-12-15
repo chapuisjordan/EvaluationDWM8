@@ -124,38 +124,22 @@ body{
 .no-style{
     color: black;
     text-decoration: none;
+    font-family: 'Nunito', sans-serif;
 }
-.first-div-onglet{
-    margin-left: 30px;
+.onglet{
+    margin:0 5px 0;
     height:100%;
-    width: 90px;
+    width: 95px;
     display:flex;
     align-items: center;
-    border-right:1px solid black;
-    border-left: 1px solid black;
+    border-right:5px solid black;
+    border-left:5px solid black;
+    border-bottom:1px solid black;
+    border-top:1px solid black;
+    border-radius: 10px;
     justify-content: center;
 }
-.div-onglet{
-    height:100%;
-    width: 90px;
-    border-right: 1px solid black;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-.last-div-onglet{
-    height:100%;
-    width: 90px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid black;
-}
-.barre-onglets{
-    width: 400px;
-    border: 1px solid black;
-    margin: 5px auto;
-}
+
 .hover-orange:hover{
     background-color:#F9AC1C;
 }

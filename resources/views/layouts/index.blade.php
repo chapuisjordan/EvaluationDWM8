@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Micramanio</title>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('js/script.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ URL::asset('js/script.js') }}"></script>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -12,7 +12,7 @@
 <body>
     <header>
         @include('layouts.navbar')
-        @include('layouts.navbardeux')
+        @yield('navbardeux')
     </header>
 
     <main>

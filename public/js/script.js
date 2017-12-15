@@ -1,7 +1,8 @@
-$(document).ready(function({
-
-  $('.categorie').css('transition', '1s');
-  $('.categorie').css('opacity', '0');
-  $('.categorie').css('color', 'white');
-
-}));
+new Vue({
+  el: '#tuto',
+  methods: {
+    chargement: function () {
+      alert('On a cliqué !');
+    }
+  }
+});

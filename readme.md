@@ -12,10 +12,9 @@
 10 - Modification du style des forms.
 
 
-
-
 <h2>Problèmes rencontrés :<br><br></h2>
-<strong>1-Listing (games->undefined variable/)</strong>
+<strong>1-Listing (games->undefined variable/)</strong><br>
+Problème réglé !
 <br><br>
 <strong>2-Listing, problème avec la relation One to Many:<br></strong>
 dd($authorsAll)->renvoie un array avec les données.
@@ -27,8 +26,14 @@ dd($authorsAll)->renvoie un array avec les données.
 <br><strong>4-Method detach does not exist.</strong>
 <br>!!!Probléme réglé, réecriture de la même phrase...TGCM
 <br><br>
-5 - Ma "navbar deux" affichage : 
-<br>Je veux l'afficher sur toute les pages sauf l'accueil, j'ai donc essayé avef un if :
-<br>
+<strong>5 - Ma "navbar deux" affichage :</strong> 
+<br>Je veux l'afficher sur toute les pages sauf l'accueil, j'ai donc essayé avef un if...infonctionnel.
+<br><br>
+<strong>6 - Javascript->problème de chargement</strong><br>
+Installation de packages : <br>
+sudo apt install <br>
+sudo apt install <br>
+Fonctionne toujours pas<br>
+npm install <br>
  
 
