@@ -14,13 +14,13 @@
 @endsection
 
 @section('main')
-    {!! Form::open(['url' => '/game/search/{id}', 'class' => 'container']) !!}
+    {!! Form::open(['url' => '/game/search/{id}', 'class' => 'container-search']) !!}
     <div class="group">
         {{{ Form::label('Nom du jeu :') }}}
         {{{ Form::text('name') }}}
     </div>
     <div class="submit">
-        {{{ Form::submit('Insérer') }}}
+        {{{ Form::submit('Rechercher') }}}
     </div>
     {!! Form::close() !!}
 

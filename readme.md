@@ -1,5 +1,6 @@
                 EVALUATION DWM8
-                
+  
+<h2> Etapes de développement : </h2> <br><br>                
 1 - Style de 'accueil'.<br>
 2 - Création de la page listing.<br>
 3 - Création de la page create.<br>
@@ -8,8 +9,24 @@
 6 - Création d'un deuxième navbar afin de faciliter la visite.<br>
 7 - Ajout de Author sur toute les pages.<br>
 8 - Ajout du nombre d'article en stock<br>
-9 - Modification style, ajout d'une "seconde navbar".
-10 - Modification du style des forms.
+9 - Modification style, ajout d'une "seconde navbar".<br>
+10 - Modification du style des forms.<br>
+11 - Ajout de la barre recherche.
+<br><br>
+<strong>Modifcations qui m'ont pris du temps :<br></strong><br>
+Relation one to many
+barre recherche
+Le style (Et oui même si on ne dirait pas)
+<br><br><br>
+<strong>Modifications que je n'ai pas eu le temps de faire : <br><br></strong>
+.JavaScript, j'ai voulu faire des animations aux chargements de la page, j'ai mis beaucoup de temps à comprendre 
+comment charger du Js et par la suite la syntaxe avait des erreurs j'ai donc laissé de côté mais n'ai pas eu le 
+temps d'y revenir.<br><br>
+.Les mediaqueries, je voulais le rendre plus responsive qu'il l'est actuellement.
+
+
+
+
 
 
 <h2>Problèmes rencontrés :<br><br></h2>
@@ -36,5 +53,6 @@ sudo apt install <br>
 Fonctionne toujours pas<br>
 npm install -> Met trop longtemps Ctrl-C<br><br>
 <strong>7 - Quelques bugs à l'accueil, l'image background ne charge pas tout le temps</strong><br>
+
  
 
