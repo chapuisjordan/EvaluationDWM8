@@ -169,4 +169,23 @@ class gamesController extends Controller
         return redirect('/updatelist');
     }
 
+    public function searchIdAction(Request $request,$id)
+    {
+        $games = Game::all();
+        foreach ($games as $game)
+        {
+            if ($game->name == $request->name)
+            {
+
+                return view('listeOneGame', ['game' => $game]);
+            }
+            else{
+                redirect('/');
+            }
+
+        }
+
+
+    }
+
 }

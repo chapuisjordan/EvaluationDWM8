@@ -34,6 +34,7 @@ Installation de packages : <br>
 sudo apt install <br>
 sudo apt install <br>
 Fonctionne toujours pas<br>
-npm install <br>
+npm install -> Met trop longtemps Ctrl-C<br><br>
+<strong>7 - Quelques bugs à l'accueil, l'image background ne charge pas tout le temps</strong><br>
  
 

@@ -1,15 +1,18 @@
 @extends('layouts.index')
 @section('title')
-    Mettre à jour un jeu
+    <i class="fa fa-refresh" aria-hidden="true"></i> Mettre à jour un jeu
 @endsection
-@section('onglet1', 'Accueil')
-@section('href1', '/')
-@section('onglet2', 'Ajouter')
-@section('href2', '/add')
-@section('onglet3', 'Liste')
-@section('href3', '/listing')
-@section('onglet4', 'Supprimer')
-@section('href4', '/delete')
+@section('navbardeux')
+    <div class="navbardeux">
+        <div class="onglets">
+            <a href="/" class="no-style"><div class="onglet hover-orange">Accueil</div></a>
+            <a href="/add" class="no-style"><div class="onglet hover-orange">Ajouter</div></a>
+            <a href="/listing" class="no-style"><div class="onglet hover-orange">Liste</div></a>
+            <a href="/delete" class="no-style"><div class="onglet hover-orange">Supprimer</div></a>
+        </div>
+    </div>
+@endsection
+
 
 @section('main')
     <div class="form-add">
@@ -38,12 +41,12 @@
         <hr class="barre">
         <div class="group-select">
             {{{ Form::label('Support(s) : ') }}}
-            {{{ Form::select('supports[]', $supports, $game->supports, ['multiple' => true]) }}}
+            {{{ Form::select('supports[]', $supports, $game->supports, ['multiple' => true], array('class' => 'select-form')) }}}
         </div>
         <hr class="barre">
         <div class="group-select">
             {{{ Form::label('Language(s) : ') }}}
-            {{{ Form::select('languages[]', $languages, $game->languages, ['multiple' => true]) }}}
+            {{{ Form::select('languages[]', $languages, $game->languages, ['multiple' => true], array('class' => 'select-form')) }}}
         </div>
         <hr class="barre">
         <div class="group-select">

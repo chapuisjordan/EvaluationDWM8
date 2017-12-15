@@ -6,7 +6,7 @@
 }
 body{
     margin: 0;
-    background-color: #D9DCD6;
+    background-color: #D64933; //D9DCD6
 }
 .title-navbar{
     margin:0 auto;
@@ -23,6 +23,7 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    font-family: 'Itim', cursive;
 }
 .categorie{
     margin-top:20px;
@@ -34,20 +35,36 @@ body{
     align-items: center;
 }
 .listing{
+    background-image: url('../image/black_linen_v2.png');
+}
+.listing:hover{
+    transition: 1.5s;
     background-image: url('../image/listing.jpg');
 }
 .add{
+    background-image: url('../image/black_linen_v2.png');
+}
+.add:hover{
+    transition: 1.5s;
     background-image: url('../image/create.jpg');
 }
 .update{
+    background-image: url('../image/black_linen_v2.png');
+}
+.update:hover{
+    transition: 1.5s;
     background-image: url('../image/update.jpg');
 }
 .delete{
-    background-image: url('../image/listing.jpg');
+    background-image: url('../image/black_linen_v2.png');
+}
+.delete:hover{
+    transition : 1.5s;
+    background-image: url('../image/gamin.jpg');
 }
 .categorie-texte{
     font-size: 40px;
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 .tableau{
@@ -61,10 +78,11 @@ body{
     border: 1px solid white;
     padding: 10px 5px;
     text-align: center;
-    background-color: #3A7CA5;
+    background-color: #92DCE5;
 }
 .en-tete-tableau td{
-    background-color: #D9DCD6;
+    background-color: #2B303A;
+    color: white;
 }
 .form-add{
 
@@ -84,9 +102,9 @@ body{
     width: 500px;
     display: flex;
     justify-content: center;
-    border: 15px solid white;
+        border: 15px solid white;
     border-radius: 20px;
-    background-color: #C81D25;
+    background-color: #EEE5E9;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
@@ -118,8 +136,10 @@ body{
 }
 .onglets {
     margin-right: 30px;
-    width: 400px;
+    width: 500px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .no-style{
     color: black;
@@ -141,5 +161,6 @@ body{
 }
 
 .hover-orange:hover{
-    background-color:#F9AC1C;
+    background-color:black;
+    color: white;
 }

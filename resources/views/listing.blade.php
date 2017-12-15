@@ -14,10 +14,21 @@
 @endsection
 
 @section('main')
+    {!! Form::open(['url' => '/game/search/{id}', 'class' => 'container']) !!}
+    <div class="group">
+        {{{ Form::label('Nom du jeu :') }}}
+        {{{ Form::text('name') }}}
+    </div>
+    <div class="submit">
+        {{{ Form::submit('Insérer') }}}
+    </div>
+    {!! Form::close() !!}
+
+
     <table class="tableau">
         <tr class="en-tete-tableau">
             <td>Nom</td>
-            <td>Author</td>
+            <td>Créateur</td>
             <td>Dernière MAJ</td>
             <td>Supports</td>
             <td>Languages</td>
