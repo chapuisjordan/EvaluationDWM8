@@ -14,8 +14,8 @@
 11 - Ajout de la barre recherche.
 <br><br>
 <strong>Modifcations qui m'ont pris du temps :<br></strong><br>
-Relation one to many
-barre recherche
+Relation one to many<br>
+barre recherche<br>
 Le style (Et oui même si on ne dirait pas)
 <br><br><br>
 <strong>Modifications que je n'ai pas eu le temps de faire : <br><br></strong>
@@ -45,6 +45,7 @@ dd($authorsAll)->renvoie un array avec les données.
 <br><br>
 <strong>5 - Ma "navbar deux" affichage :</strong> 
 <br>Je veux l'afficher sur toute les pages sauf l'accueil, j'ai donc essayé avef un if...infonctionnel.
+<br>Je fais donc une intégration su chaque page...
 <br><br>
 <strong>6 - Javascript->problème de chargement</strong><br>
 Installation de packages : <br>
