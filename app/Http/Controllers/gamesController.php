@@ -51,7 +51,14 @@ class gamesController extends Controller
         {
             $languages[$value->id] = $value->language;
         }
-        return view('add', ['supports' => $supports, 'languages' => $languages]);
+        $authorsAll = Author::all();
+        $authors =[];
+        foreach ($authorsAll as $value)
+        {
+            $authors[$value->id] = $value->author;
+        }
+
+        return view('add', ['supports' => $supports, 'languages' => $languages, 'authors' => $authors]);
     }
     public function addAction(Request $request)
     {
@@ -59,6 +66,8 @@ class gamesController extends Controller
         $game->name = $request->name;
         $game->updated_date = $request->updated_date;
         $game->created_date = $request->created_date;
+        $game->author_id = $request->authors;
+        $game->number = $request->number;
         $game->save();
         $game->supports()->attach($request->supports);
         $game->languages()->attach($request->languages);
@@ -94,6 +103,8 @@ class gamesController extends Controller
     public function deleteAction(Request $request, $id)
     {
         $game = Game::find($id);
+        $game->supports()->detach();
+        $game->languages()->detach();
         $game->delete();
         return redirect('/delete');
     }
@@ -149,12 +160,33 @@ class gamesController extends Controller
         $game->name = $request->name;
         $game->created_date = $request->created_date;
         $game->updated_date = $request->updated_date;
+        $game->number = $request->number;
+        $game->author_id = $request->author;
         $game->save();
         $game->supports()->detach();
         $game->supports()->attach($request->supports);
         $game->languages()->detach();
         $game->languages()->attach($request->languages);
         return redirect('/updatelist');
+    }
+
+    public function searchIdAction(Request $request,$id)
+    {
+        $games = Game::all();
+        foreach ($games as $game)
+        {
+            if ($game->name == $request->name)
+            {
+
+                return view('listeOneGame', ['game' => $game]);
+            }
+            else{
+                redirect('/');
+            }
+
+        }
+
+
     }
 
 }

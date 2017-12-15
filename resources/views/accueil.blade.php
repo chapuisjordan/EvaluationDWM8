@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('title')
-Accueil
+Micramanio
 @endsection
 
 @section('main')

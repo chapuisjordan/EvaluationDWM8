@@ -1,13 +1,33 @@
 @extends('layouts.index')
 @section('title')
-Ajouter un livre
+    <i class="fa fa-plus" aria-hidden="true"></i> Ajouter un jeu
 @endsection
+@section('navbardeux')
+    <div class="navbardeux">
+        <div class="onglets">
+            <a href="/" class="no-style"><div class="onglet hover-orange">Accueil</div></a>
+            <a href="/listing" class="no-style"><div class="onglet hover-orange">Liste</div></a>
+            <a href="/delete" class="no-style"><div class="onglet hover-orange">Supprimer</div></a>
+            <a href="/updatelist" class="no-style"><div class="onglet hover-orange">Mettre à jour</div></a>
+        </div>
+    </div>
+@endsection
+
+
 @section('main')
 <div class="form-add">
-    {!! Form::open(['url' => '/game/insert']) !!}
+    {!! Form::open(['url' => '/game/insert', 'class' => 'container']) !!}
     <div class="group">
         {{{ Form::label('Nom :') }}}
         {{{ Form::text('name') }}}
+    </div>
+    <div class="group-select">
+        {{{ Form::label('Nombre en stock : ') }}}
+        {{{ Form::number('number') }}}
+    </div>
+    <div class="group">
+        {{{ Form::label('Créateur :') }}}
+        {{{ Form::select('authors', $authors) }}}
     </div>
     <div class="group">
         {{{ Form::label('Date de création :') }}}
