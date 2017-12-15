@@ -14,13 +14,20 @@ Liste des films
     <table class="tableau">
         <tr class="en-tete-tableau">
             <td>Nom</td>
+            <td>Author</td>
             <td>Dernière MAJ</td>
             <td>Supports</td>
             <td>Languages</td>
+            <td>Nombre en stock</td>
         </tr>
         @foreach($games as $game)
            <tr>
                <td>{{ $game->name }}</td>
+               @if($game->author)
+                <td>{{ $game->author->author }}</td>
+               @else
+                <td>N</td>
+               @endif
                @if($game->updated_date == null)
                    <td>Null</td>
                @else
@@ -36,6 +43,7 @@ Liste des films
                 {{ $language->language }}
                @endforeach
                </td>
+               <td>{{ $game->number }}</td>
            </tr>
 
         @endforeach

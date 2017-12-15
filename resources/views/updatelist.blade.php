@@ -14,14 +14,22 @@
 <table class="tableau">
     <tr class="en-tete-tableau">
         <td>Nom</td>
+        <td>Créateur</td>
         <td>Dernière MAJ</td>
         <td>Supports</td>
         <td>Languages</td>
+        <td>Nombre en stock</td>
         <td>Mettre à jour</td>
+
     </tr>
     @foreach($games as $game)
         <tr>
             <td>{{ $game->name }}</td>
+            @if($game->author)
+                <td>{{ $game->author->author }}</td>
+            @else
+                <td>N</td>
+            @endif
             @if($game->updated_date == null)
                 <td>Null</td>
             @else
@@ -37,6 +45,7 @@
                     {{ $language->language }}
                 @endforeach
             </td>
+            <td>{{ $game->number }}</td>
             <td>
             <form method="get" action="/game/update/{{ $game->id }}">
                 <button class="btn">
@@ -44,6 +53,7 @@
                 </button>
             </form>
             </td>
+
         </tr>
 
     @endforeach

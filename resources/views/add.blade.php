@@ -19,6 +19,14 @@ Ajouter un livre
         {{{ Form::label('Nom :') }}}
         {{{ Form::text('name') }}}
     </div>
+    <div class="group-select">
+        {{{ Form::label('Nombre en stock : ') }}}
+        {{{ Form::number('number') }}}
+    </div>
+    <div class="group">
+        {{{ Form::label('Créateur :') }}}
+        {{{ Form::select('authors', $authors) }}}
+    </div>
     <div class="group">
         {{{ Form::label('Date de création :') }}}
         {{{ Form::text('created_date') }}}
